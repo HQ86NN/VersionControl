@@ -18,7 +18,7 @@ namespace UserMaintenance_
         {
             InitializeComponent();
             lblFullName.Text = Resource1.FullName; 
-            
+            lblFirstName.Text = Resource1.FirstName; 
             btnAdd.Text = Resource1.Add; 
             listUsers.DataSource = users;
             listUsers.ValueMember = "ID";
@@ -30,7 +30,7 @@ namespace UserMaintenance_
             var u = new User()
             {
                 FullName = txtFullName.Text,
-               
+               // FirstName = txtFirstName.Text
             };
             users.Add(u);
         }

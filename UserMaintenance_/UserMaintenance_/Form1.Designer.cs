@@ -30,7 +30,9 @@
         {
             this.listUsers = new System.Windows.Forms.ListBox();
             this.lblFullName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -51,12 +53,28 @@
             this.lblFullName.TabIndex = 1;
             this.lblFullName.Text = "label1";
             // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(139, 39);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(35, 13);
+            this.lblFirstName.TabIndex = 2;
+            this.lblFirstName.Text = "label2";
+            // 
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(180, 10);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(100, 20);
             this.txtFullName.TabIndex = 3;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(180, 36);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.TabIndex = 4;
             // 
             // btnAdd
             // 
@@ -74,7 +92,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtFullName);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
@@ -88,7 +108,9 @@
 
         private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.Label lblFullName;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Button btnAdd;
     }
 }
