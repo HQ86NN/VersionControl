@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace UserMaintenance_
             listUsers.DataSource = users;
             listUsers.ValueMember = "ID";
             listUsers.DisplayMember = "FullName";
+            btnWrite.Text = Resource1.Write;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -33,6 +35,11 @@ namespace UserMaintenance_
                 FirstName = txtFirstName.Text
             };
             users.Add(u);
+        }
+
+        private void btnWrite_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
