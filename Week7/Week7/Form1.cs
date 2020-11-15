@@ -18,6 +18,7 @@ namespace Week7
         List<BirthProbability> BirthProbabilities = new List<BirthProbability>();
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
         Random rng = new Random(1234);
+        int Year;
 
 
         public Form1()
@@ -28,13 +29,16 @@ namespace Week7
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
             dataGridView1.DataSource = Population;
 
+            szimulacio();
+        }
+
+        private void szimulacio()
+        {
             for (int year = 2005; year <= 2024; year++)
             {
-
-
                 for (int i = 0; i < Population.Count; i++)
                 {
-                    SimStep();
+
                 }
 
                 int nbrOfMales = (from x in Population
@@ -46,8 +50,6 @@ namespace Week7
                 Console.WriteLine(
                     string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
             }
-
-
         }
 
         private void SimStep(int year, Person person)
@@ -76,7 +78,6 @@ namespace Week7
             }
         }
 
-        
         public List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
@@ -137,7 +138,20 @@ namespace Week7
 
             return Dprobabilities;
         }
-        
 
+        private void button1_MouseClick(Object sender, MouseEventArgs e)
+        {
+            szimulacio();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult res = ofd.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                textBox1.Text = @"C:\Temp\nép.csv";
+            }
+        }
     }
 }
